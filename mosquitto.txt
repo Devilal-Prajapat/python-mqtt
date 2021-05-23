@@ -1,0 +1,52 @@
+<install mosquitto & mosquitto clients> :
+sudo apt install mosquitto mosquitto-clients
+
+<start broker> :
+mosquitto 
+
+<subscribe message> :
+mosquitto_sub -h <host> -p <port> -t <topic>
+
+<publish message> :
+mosquitto_pub -h <host> -p <port> -t <topic> -m <msg>
+
+<mosquitto using username & password> :
+create uasername & password :
+sudo mosquitto_passwd -c <password file> <username>
+  this command ask to enter passwrod
+  example : sudo mosquitto_passwd -c  /etc/mosquitto/passwd devilal
+ 
+ <delete username & password> :
+ sudo mosquitto_passwd -D <password file> <username>
+ example : 
+          sudo mosquitto_passwd -D  /etc/mosquitto/passwd devilal
+  
+<Enable username & password> :
+open /etc/mosquitto/conf.d/default.conf and add follwing lines and restart the mosquitto
+
+  allow_anonymous false
+  password_file /etc/mosquitto/passwd
+  
+  listener 1883 localhost
+ 
+  
+<restart mosquitto> :
+sudo systemctl restart mosquitto
+
+<start mosquitto> :
+sudo systemctl start mosquitto
+ 
+<stop mosquitto> :
+sudo systemctl stop mosquitto
+
+<status mosquitto> :
+sudo systemctl status mosquitto
+
+
+<subscribe message using username & password> :
+mosquitto_sub -h <host> -p <port> -t <topic> -u <username> -P <password>
+
+<publish message using username & password> :
+mosquitto_pub -h <host> -p <port> -t <topic> -m <msg> -u <username> -P <password>
+ 
+ 
