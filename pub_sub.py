@@ -6,8 +6,8 @@ import json
 import random
 
 client = None
-PUB_TOPIC = "sbos/demo/pub"
-SUB_TOPIC = "sbos/demo/sub"
+PUB_TOPIC = "demo/pub"
+SUB_TOPIC = "demo/sub"
 
 # MQTT_HOST = "broker.hivemq.com"
 MQTT_HOST = "test.mosquitto.org"
