@@ -4,7 +4,7 @@ import time
 import os
 
 MAX_FILE_SIZE = 5*1000*1024  # 5MB
-FORMAT = '%(asctime)s : %(levelname)s : %(name)s : %(message)s'
+FORMAT = '%(asctime)s : %(levelname)s : %(filename)s : %(message)s'
 
 loger = logging.getLogger(__name__)
 loger.setLevel(logging.DEBUG)
