@@ -1,3 +1,6 @@
-# python-mqtt
-Sample Demo Application using Mosquitto Broker and paho python library
+# python-websocket
+- Docker conntainer for python environment
+- Sample Demo Application using python websocket
+
+
 

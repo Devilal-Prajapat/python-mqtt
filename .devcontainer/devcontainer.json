@@ -1,0 +1,31 @@
+{
+  "name": "websocket-dev",
+ "dockerComposeFile": "../docker-compose.yaml",
+ "service": "python-ws",
+  "workspaceFolder": "/workspace",
+  
+  "runArgs": [
+    "--privileged",
+    "--network=host"
+  ],
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "ms-python.python",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "twxs.cmake",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode-remote.remote-containers",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy"
+      ],
+        "settings": {
+            "C_Cpp.intelliSenseEngine": "enabled"
+            
+        }
+    }
+  }
+}
